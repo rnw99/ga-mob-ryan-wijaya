@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Ryan App-->
@@ -217,11 +216,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pandora" translatesAutoresizingMaskIntoConstraints="NO" id="qpk-mm-FBy">
-                                <rect key="frame" x="16" y="264" width="288" height="284"/>
+                                <rect key="frame" x="16" y="338" width="288" height="210"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-9c-dCe">
-                                <rect key="frame" x="16" y="72" width="288" height="184"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-9c-dCe">
+                                <rect key="frame" x="16" y="72" width="288" height="258"/>
                                 <color key="backgroundColor" red="0.76488803969999997" green="0.89132051859999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="qbo-nA-V30"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">I created this App in order to:
@@ -267,14 +269,13 @@ Cg
                         </subviews>
                         <color key="backgroundColor" red="0.76488803969999997" green="0.89132051859999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="JCE-9c-dCe" firstAttribute="top" secondItem="8Le-xh-LPS" secondAttribute="bottom" constant="8" id="Bk7-1Q-xPF"/>
-                            <constraint firstItem="qpk-mm-FBy" firstAttribute="height" secondItem="JCE-9c-dCe" secondAttribute="height" id="FHc-Rb-0o5"/>
-                            <constraint firstItem="JCE-9c-dCe" firstAttribute="leading" secondItem="txW-d5-uFK" secondAttribute="leadingMargin" id="S4V-hf-jGS"/>
-                            <constraint firstItem="qpk-mm-FBy" firstAttribute="leading" secondItem="txW-d5-uFK" secondAttribute="leadingMargin" id="V0i-xN-84l"/>
-                            <constraint firstItem="JCE-9c-dCe" firstAttribute="trailing" secondItem="txW-d5-uFK" secondAttribute="trailingMargin" id="aab-C1-W9F"/>
-                            <constraint firstItem="VM4-PR-jXL" firstAttribute="top" secondItem="qpk-mm-FBy" secondAttribute="bottom" constant="20" id="cD0-fe-5Oc"/>
-                            <constraint firstItem="JCE-9c-dCe" firstAttribute="height" secondItem="txW-d5-uFK" secondAttribute="height" multiplier="0.5" id="lRm-dv-zKX"/>
-                            <constraint firstItem="qpk-mm-FBy" firstAttribute="trailing" secondItem="txW-d5-uFK" secondAttribute="trailingMargin" id="uFf-lM-GEE"/>
+                            <constraint firstItem="JCE-9c-dCe" firstAttribute="leading" secondItem="txW-d5-uFK" secondAttribute="leadingMargin" id="2Hw-ZC-WCX"/>
+                            <constraint firstItem="qpk-mm-FBy" firstAttribute="trailing" secondItem="JCE-9c-dCe" secondAttribute="trailing" id="5eg-np-HGm"/>
+                            <constraint firstItem="qpk-mm-FBy" firstAttribute="top" secondItem="JCE-9c-dCe" secondAttribute="bottom" constant="8" id="8Ip-yf-RWR"/>
+                            <constraint firstItem="JCE-9c-dCe" firstAttribute="trailing" secondItem="txW-d5-uFK" secondAttribute="trailingMargin" id="Akq-c4-iBH"/>
+                            <constraint firstItem="VM4-PR-jXL" firstAttribute="top" secondItem="qpk-mm-FBy" secondAttribute="bottom" constant="20" id="PcX-vU-LZb"/>
+                            <constraint firstItem="qpk-mm-FBy" firstAttribute="leading" secondItem="JCE-9c-dCe" secondAttribute="leading" id="jgP-6o-oEF"/>
+                            <constraint firstItem="JCE-9c-dCe" firstAttribute="top" secondItem="8Le-xh-LPS" secondAttribute="bottom" constant="8" id="qCN-2L-oHb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Goals" id="qlj-Ok-MCH">
