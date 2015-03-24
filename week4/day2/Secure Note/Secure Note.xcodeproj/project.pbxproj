@@ -15,6 +15,8 @@
 		BF5C7B8B1ABD0959002C8FA9 /* Secure_NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C7B8A1ABD0959002C8FA9 /* Secure_NoteTests.swift */; };
 		BF5C7B971ABEE196002C8FA9 /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C7B961ABEE196002C8FA9 /* CreateContactViewController.swift */; };
 		BF5C7B991ABEEB6C002C8FA9 /* MaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C7B981ABEEB6B002C8FA9 /* MaTableViewController.swift */; };
+		BFBFD2621AC18BEF008A8F6E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFD2611AC18BEF008A8F6E /* SignInViewController.swift */; };
+		BFBFD2641AC18C0F008A8F6E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFD2631AC18C0F008A8F6E /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		BF5C7B8A1ABD0959002C8FA9 /* Secure_NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secure_NoteTests.swift; sourceTree = "<group>"; };
 		BF5C7B961ABEE196002C8FA9 /* CreateContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
 		BF5C7B981ABEEB6B002C8FA9 /* MaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaTableViewController.swift; sourceTree = "<group>"; };
+		BFBFD2611AC18BEF008A8F6E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BFBFD2631AC18C0F008A8F6E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		BF5C7B711ABD0959002C8FA9 /* Secure Note */ = {
 			isa = PBXGroup;
 			children = (
+				BFBFD2611AC18BEF008A8F6E /* SignInViewController.swift */,
+				BFBFD2631AC18C0F008A8F6E /* SignUpViewController.swift */,
 				BF5C7B741ABD0959002C8FA9 /* AppDelegate.swift */,
 				BF5C7B761ABD0959002C8FA9 /* ViewController.swift */,
 				BF5C7B781ABD0959002C8FA9 /* Main.storyboard */,
@@ -218,9 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBFD2641AC18C0F008A8F6E /* SignUpViewController.swift in Sources */,
 				BF5C7B771ABD0959002C8FA9 /* ViewController.swift in Sources */,
 				BF5C7B751ABD0959002C8FA9 /* AppDelegate.swift in Sources */,
 				BF5C7B971ABEE196002C8FA9 /* CreateContactViewController.swift in Sources */,
+				BFBFD2621AC18BEF008A8F6E /* SignInViewController.swift in Sources */,
 				BF5C7B991ABEEB6C002C8FA9 /* MaTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +423,7 @@
 				BF5C7B901ABD0959002C8FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF5C7B911ABD0959002C8FA9 /* Build configuration list for PBXNativeTarget "Secure NoteTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +432,7 @@
 				BF5C7B931ABD0959002C8FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
