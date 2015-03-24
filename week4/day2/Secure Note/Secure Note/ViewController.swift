@@ -24,7 +24,9 @@ class ViewController: UIViewController {
         fullNameLabel!.text = contact["firstName"]! + " " + contact["lastName"]!
         phoneLabel!.text = contact["phone"]!
         emailLabel!.text = contact["email"]!
+
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
