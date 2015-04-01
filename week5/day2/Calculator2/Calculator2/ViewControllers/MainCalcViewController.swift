@@ -12,36 +12,59 @@ class MainCalcViewController: UIViewController {
 
     @IBOutlet weak var screen: UILabel!
     
-    var firstNumber: Int = 0
-    var secondNumber: Int = 0
-    var result: Int = 0
+    // use float for decimal points
+    // divide something by zero displays Error
+    // no need to display 1+10e for really large numbers
+    // A & AC not necessary
+    // swipe display screen to clear
+    
+    var firstNumber: Double? = 0.0
+    var secondNumber: Double? = 0.0
+    var result: Double = 0.0
     var operation = ""
     
     @IBAction func numberInput(sender: AnyObject) {
-        screen.text = sender.currentTitle
+        var tempString = screen.text
+        
+        if (sender.currentTitle == ".") {
+            if (tempString?.rangeOfString(".") == nil) {
+                tempString = tempString! + sender.currentTitle!!
+            }
+        } else if (tempString == "0") {
+            tempString = sender.currentTitle!!
+        } else {
+            tempString = tempString! + sender.currentTitle!!
+        }
+        
+        screen.text = tempString
     }
     
     @IBAction func operation(sender: AnyObject) {
-        firstNumber = screen.text!.toInt()!
+        
+        var aNumber = NSNumberFormatter().numberFromString(screen.text!)
+        firstNumber = aNumber?.doubleValue
+        
         operation = sender.currentTitle!!
         
     }
     
     @IBAction func equals(sender: AnyObject) {
-        secondNumber = screen.text!.toInt()!
         
-        if (operation == "+/-") {
-            result = firstNumber * -1
+        var aNumber = NSNumberFormatter().numberFromString(screen.text!)
+        secondNumber = aNumber?.doubleValue
+        
+        if (operation == "⁺/-") {
+            result = firstNumber! * -1
         } else if (operation == "%") {
-            result = firstNumber / 100
-        } else if (operation == "/") {
-            result = firstNumber / secondNumber
+            result = firstNumber! / 100
+        } else if (operation == "÷") {
+            result = firstNumber! / secondNumber!
         } else if (operation == "x") {
-            result = firstNumber * secondNumber
+            result = firstNumber! * secondNumber!
         } else if (operation == "-") {
-            result = firstNumber - secondNumber
+            result = firstNumber! - secondNumber!
         } else {
-            result = firstNumber + secondNumber
+            result = firstNumber! + secondNumber!
         }
         screen.text = "\(result)"
         

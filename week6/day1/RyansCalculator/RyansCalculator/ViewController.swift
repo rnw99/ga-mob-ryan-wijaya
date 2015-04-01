@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Calculator2
+//  RyansCalculator
 //
-//  Created by Ryan Wijaya on 29/03/2015.
+//  Created by Ryan Wijaya on 31/03/2015.
 //  Copyright (c) 2015 rnwcorp. All rights reserved.
 //
 

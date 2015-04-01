@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RyansCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-Pe-kCj" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to clear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq0-Wi-gtE">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YQ-uj-G1Y">
+                                        <rect key="frame" x="8" y="25" width="304" height="95"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="0">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="60" name="HelveticaNeue-Thin"/>
+                                                    <font key="NSOriginalFont" size="60" name="HelveticaNeue-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prj-Qh-iuy">
+                                        <rect key="frame" x="1" y="120" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.83017676760000003" green="0.83017676760000003" blue="0.83017676760000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="AC">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="25" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-g0-MtK">
+                                        <rect key="frame" x="1" y="192" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="7">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT8-f3-Bhj">
+                                        <rect key="frame" x="1" y="264" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="4">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pv3-Nr-biY">
+                                        <rect key="frame" x="1" y="336" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="1">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-79-Kt4">
+                                        <rect key="frame" x="1" y="408" width="159" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="0">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5m-nT-Y3m">
+                                        <rect key="frame" x="81" y="120" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.83017676760000003" green="0.83017676760000003" blue="0.83017676760000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="⁺/-">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="30" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-wN-tXz">
+                                        <rect key="frame" x="81" y="192" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="8">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkH-Sd-U8s">
+                                        <rect key="frame" x="81" y="264" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="5">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QL6-me-5da">
+                                        <rect key="frame" x="81" y="336" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="2">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-3Y-NUd">
+                                        <rect key="frame" x="161" y="120" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.83017676760000003" green="0.83017676760000003" blue="0.83017676760000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="%">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="30" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-Wn-b2u">
+                                        <rect key="frame" x="161" y="192" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="9">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jX0-rw-TKS">
+                                        <rect key="frame" x="161" y="264" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="6">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2X-jn-wSa">
+                                        <rect key="frame" x="161" y="336" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="3">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TL-oa-pHx">
+                                        <rect key="frame" x="161" y="408" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content=".">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="30" name="TimesNewRomanPS-BoldMT"/>
+                                                        <font key="NSOriginalFont" size="30" name="TimesNewRomanPS-BoldMT"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-dv-iUf">
+                                        <rect key="frame" x="241" y="120" width="79" height="71"/>
+                                        <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="÷">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOY-a5-bwB">
+                                        <rect key="frame" x="241" y="192" width="79" height="71"/>
+                                        <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="x">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWg-Wu-960">
+                                        <rect key="frame" x="241" y="264" width="79" height="71"/>
+                                        <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="−">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9r-9b-42k">
+                                        <rect key="frame" x="241" y="336" width="79" height="71"/>
+                                        <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="+">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-e5-GNv">
+                                        <rect key="frame" x="241" y="408" width="79" height="71"/>
+                                        <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="=">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="12i-Uc-XCJ"/>
+                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" id="4Jq-58-d21"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jq0-Wi-gtE" secondAttribute="trailing" id="4eu-iF-taB"/>
+                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="top" secondItem="nJ9-Pe-kCj" secondAttribute="top" id="9yC-2E-vmk"/>
+                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.0520833" id="CX5-BU-tMf"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.1479" id="DJ0-eh-61n"/>
+                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="top" secondItem="7YQ-uj-G1Y" secondAttribute="bottom" id="Hib-eg-vYe"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.246875" id="MPL-JS-KZ6"/>
+                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.246875" id="Na4-tF-mIM"/>
+                                    <constraint firstAttribute="trailing" secondItem="7YQ-uj-G1Y" secondAttribute="trailing" constant="8" id="Yec-J8-NWr"/>
+                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.1979" id="Z4W-er-1jw"/>
+                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="top" secondItem="Jq0-Wi-gtE" secondAttribute="bottom" id="e13-NC-JV8"/>
+                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.1479" id="eOP-Ee-qxi"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="top" secondItem="prj-Qh-iuy" secondAttribute="bottom" constant="1" id="lHo-zu-c5R"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="ygX-Wf-OQd"/>
+                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="8" id="zuF-vR-qhx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nJ9-Pe-kCj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="D4G-mn-ySD"/>
+                            <constraint firstAttribute="trailing" secondItem="nJ9-Pe-kCj" secondAttribute="trailing" id="JhD-I6-LgX"/>
+                            <constraint firstItem="nJ9-Pe-kCj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KMQ-6m-85q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nJ9-Pe-kCj" secondAttribute="bottom" id="kF1-Dh-kw2"/>
+                            <constraint firstItem="nJ9-Pe-kCj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="lVr-AS-As2"/>
+                            <constraint firstItem="nJ9-Pe-kCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="meC-7Y-xUu"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="309"/>
+        </scene>
+    </scenes>
+</document>

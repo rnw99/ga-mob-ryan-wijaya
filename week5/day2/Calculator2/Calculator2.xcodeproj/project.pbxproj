@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BF4385251AC79A3E002949BE /* MainCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4385241AC79A3E002949BE /* MainCalcViewController.swift */; };
 		BF856D4B1AC78A1800AEDA7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF856D4A1AC78A1800AEDA7D /* AppDelegate.swift */; };
-		BF856D4D1AC78A1800AEDA7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF856D4C1AC78A1800AEDA7D /* ViewController.swift */; };
 		BF856D501AC78A1800AEDA7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF856D4E1AC78A1800AEDA7D /* Main.storyboard */; };
 		BF856D521AC78A1800AEDA7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF856D511AC78A1800AEDA7D /* Images.xcassets */; };
 		BF856D551AC78A1800AEDA7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF856D531AC78A1800AEDA7D /* LaunchScreen.xib */; };
@@ -31,7 +30,6 @@
 		BF856D451AC78A1800AEDA7D /* Calculator2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF856D491AC78A1800AEDA7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF856D4A1AC78A1800AEDA7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF856D4C1AC78A1800AEDA7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF856D4F1AC78A1800AEDA7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF856D511AC78A1800AEDA7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF856D541AC78A1800AEDA7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				BF856D4A1AC78A1800AEDA7D /* AppDelegate.swift */,
-				BF856D4C1AC78A1800AEDA7D /* ViewController.swift */,
 				BF856D4E1AC78A1800AEDA7D /* Main.storyboard */,
 				BF4385241AC79A3E002949BE /* MainCalcViewController.swift */,
 				BF856D511AC78A1800AEDA7D /* Images.xcassets */,
@@ -215,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF856D4D1AC78A1800AEDA7D /* ViewController.swift in Sources */,
 				BF4385251AC79A3E002949BE /* MainCalcViewController.swift in Sources */,
 				BF856D4B1AC78A1800AEDA7D /* AppDelegate.swift in Sources */,
 			);
