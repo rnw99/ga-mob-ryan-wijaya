@@ -13,6 +13,7 @@
 		BFB986EF1ACA8ACC005B8231 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB986EE1ACA8ACC005B8231 /* Images.xcassets */; };
 		BFB986F21ACA8ACC005B8231 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB986F01ACA8ACC005B8231 /* LaunchScreen.xib */; };
 		BFB986FE1ACA8ACC005B8231 /* RyansCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB986FD1ACA8ACC005B8231 /* RyansCalculatorTests.swift */; };
+		BFB987361ACD27F9005B8231 /* MainCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB987351ACD27F9005B8231 /* MainCalcViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BFB986F71ACA8ACC005B8231 /* RyansCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyansCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB986FC1ACA8ACC005B8231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB986FD1ACA8ACC005B8231 /* RyansCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyansCalculatorTests.swift; sourceTree = "<group>"; };
+		BFB987351ACD27F9005B8231 /* MainCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCalcViewController.swift; path = ViewControllers/MainCalcViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				BFB986E71ACA8ACC005B8231 /* AppDelegate.swift */,
 				BFB986E91ACA8ACC005B8231 /* ViewController.swift */,
 				BFB986EB1ACA8ACC005B8231 /* Main.storyboard */,
+				BFB987351ACD27F9005B8231 /* MainCalcViewController.swift */,
 				BFB986EE1ACA8ACC005B8231 /* Images.xcassets */,
 				BFB986F01ACA8ACC005B8231 /* LaunchScreen.xib */,
 				BFB986E51ACA8ACC005B8231 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB986EA1ACA8ACC005B8231 /* ViewController.swift in Sources */,
+				BFB987361ACD27F9005B8231 /* MainCalcViewController.swift in Sources */,
 				BFB986E81ACA8ACC005B8231 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

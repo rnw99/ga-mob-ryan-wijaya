@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Calc View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RyansCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainCalcViewController" customModule="RyansCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,13 +22,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to clear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq0-Wi-gtE">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                                        <rect key="frame" x="0.0" y="8" width="320" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="DEA-31-KLE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YQ-uj-G1Y">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YQ-uj-G1Y">
                                         <rect key="frame" x="8" y="25" width="304" height="95"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="7YQ-uj-G1Y" secondAttribute="width" multiplier="0.3125" id="Ddj-NI-A8V"/>
+                                        </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="0">
                                                 <attributes>
@@ -39,302 +47,344 @@
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="w1w-VP-xdM" appends="YES" id="rKw-pW-mYB"/>
+                                            <outletCollection property="gestureRecognizers" destination="vv1-zs-YLc" appends="YES" id="V4N-OK-Rav"/>
+                                        </connections>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prj-Qh-iuy">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prj-Qh-iuy">
                                         <rect key="frame" x="1" y="120" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.83017676760000003" green="0.83017676760000003" blue="0.83017676760000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="AC">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="25" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="prj-Qh-iuy" secondAttribute="width" multiplier="0.898734" id="dCG-SL-DHX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="39f-aW-0Pd"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-g0-MtK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-g0-MtK">
                                         <rect key="frame" x="1" y="192" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="7">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="XZM-g0-MtK" secondAttribute="width" multiplier="0.898734" id="c90-AU-8fu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrF-ah-WQE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT8-f3-Bhj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT8-f3-Bhj">
                                         <rect key="frame" x="1" y="264" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="4">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="aT8-f3-Bhj" secondAttribute="width" multiplier="0.898734" id="FZ1-ld-5C2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3OH-Qs-DaC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pv3-Nr-biY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pv3-Nr-biY">
                                         <rect key="frame" x="1" y="336" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="1">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="Pv3-Nr-biY" secondAttribute="width" multiplier="0.898731" id="ZQQ-wy-WGc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3oi-HP-lh4"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-79-Kt4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-79-Kt4">
                                         <rect key="frame" x="1" y="408" width="159" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="3dI-79-Kt4" secondAttribute="width" multiplier="0.446541" id="I7z-SZ-oYs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="0">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URP-WE-UXr"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5m-nT-Y3m">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5m-nT-Y3m">
                                         <rect key="frame" x="81" y="120" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.83017676760000003" green="0.83017676760000003" blue="0.83017676760000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="⁺/-">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="30" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="Z5m-nT-Y3m" secondAttribute="width" multiplier="0.898734" id="Dgo-fw-4uE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="⁺/-">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="directOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVc-Am-u6f"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-wN-tXz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-wN-tXz">
                                         <rect key="frame" x="81" y="192" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="8">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="Pzu-wN-tXz" secondAttribute="width" multiplier="0.898734" id="w3s-ek-f0i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hq-3F-ipE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkH-Sd-U8s">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkH-Sd-U8s">
                                         <rect key="frame" x="81" y="264" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="5">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="VkH-Sd-U8s" secondAttribute="width" multiplier="0.898734" id="zHY-o2-E0j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjS-uK-WNR"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QL6-me-5da">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QL6-me-5da">
                                         <rect key="frame" x="81" y="336" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="2">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="QL6-me-5da" secondAttribute="width" multiplier="0.898734" id="YYG-wJ-om4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbC-gR-FIY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-3Y-NUd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-3Y-NUd">
                                         <rect key="frame" x="161" y="120" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.83017676760000003" green="0.83017676760000003" blue="0.83017676760000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="%">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="24" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="30" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="SDb-3Y-NUd" secondAttribute="width" multiplier="0.898734" id="Fml-JA-9Tv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="directOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ca-KQ-J7j"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-Wn-b2u">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-Wn-b2u">
                                         <rect key="frame" x="161" y="192" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="9">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="GFs-Wn-b2u" secondAttribute="width" multiplier="0.898734" id="XXZ-gj-rvY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bI3-S5-zMa"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jX0-rw-TKS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jX0-rw-TKS">
                                         <rect key="frame" x="161" y="264" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="6">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="jX0-rw-TKS" secondAttribute="width" multiplier="0.898734" id="KbY-BF-pSQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEg-di-9nf"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2X-jn-wSa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2X-jn-wSa">
                                         <rect key="frame" x="161" y="336" width="79" height="71"/>
                                         <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="3">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="M2X-jn-wSa" secondAttribute="width" multiplier="0.898734" id="7xB-gp-EKR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YHM-UQ-1mr"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TL-oa-pHx">
-                                        <rect key="frame" x="161" y="408" width="79" height="71"/>
-                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=".">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="30" name="TimesNewRomanPS-BoldMT"/>
-                                                        <font key="NSOriginalFont" size="30" name="TimesNewRomanPS-BoldMT"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-dv-iUf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-dv-iUf">
                                         <rect key="frame" x="241" y="120" width="79" height="71"/>
                                         <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="÷">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="GvF-dv-iUf" secondAttribute="width" multiplier="0.898734" id="Te3-D1-Cnh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="÷">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPK-cd-QNJ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOY-a5-bwB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOY-a5-bwB">
                                         <rect key="frame" x="241" y="192" width="79" height="71"/>
                                         <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="x">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="vOY-a5-bwB" secondAttribute="width" multiplier="0.898734" id="6sJ-qe-aEx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEv-t8-HYQ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWg-Wu-960">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWg-Wu-960">
                                         <rect key="frame" x="241" y="264" width="79" height="71"/>
                                         <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="−">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="iWg-Wu-960" secondAttribute="width" multiplier="0.898734" id="rYY-eh-St8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="−">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gP5-z0-TZc"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9r-9b-42k">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9r-9b-42k">
                                         <rect key="frame" x="241" y="336" width="79" height="71"/>
                                         <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="+">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                        <font key="NSOriginalFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="Q9r-9b-42k" secondAttribute="width" multiplier="0.898734" id="bU2-UB-Q9d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEk-PH-fet"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-e5-GNv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-e5-GNv">
                                         <rect key="frame" x="241" y="408" width="79" height="71"/>
                                         <color key="backgroundColor" red="1" green="0.54370306430000004" blue="0.13848939020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="=">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="4FY-e5-GNv" secondAttribute="width" multiplier="0.898734" id="WNh-V6-udo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="equalsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5H-az-8Ca"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TL-oa-pHx">
+                                        <rect key="frame" x="161" y="408" width="79" height="71"/>
+                                        <color key="backgroundColor" red="0.92073074489999995" green="0.92073074489999995" blue="0.92073074489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="9TL-oa-pHx" secondAttribute="width" multiplier="0.898734" id="67U-vE-6SX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9c-Tq-AeG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="12i-Uc-XCJ"/>
-                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" id="4Jq-58-d21"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jq0-Wi-gtE" secondAttribute="trailing" id="4eu-iF-taB"/>
-                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="top" secondItem="nJ9-Pe-kCj" secondAttribute="top" id="9yC-2E-vmk"/>
-                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.0520833" id="CX5-BU-tMf"/>
-                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.1479" id="DJ0-eh-61n"/>
-                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="top" secondItem="7YQ-uj-G1Y" secondAttribute="bottom" id="Hib-eg-vYe"/>
-                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.246875" id="MPL-JS-KZ6"/>
-                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.246875" id="Na4-tF-mIM"/>
-                                    <constraint firstAttribute="trailing" secondItem="7YQ-uj-G1Y" secondAttribute="trailing" constant="8" id="Yec-J8-NWr"/>
-                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.1979" id="Z4W-er-1jw"/>
-                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="top" secondItem="Jq0-Wi-gtE" secondAttribute="bottom" id="e13-NC-JV8"/>
-                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="height" secondItem="nJ9-Pe-kCj" secondAttribute="height" multiplier="0.1479" id="eOP-Ee-qxi"/>
-                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="top" secondItem="prj-Qh-iuy" secondAttribute="bottom" constant="1" id="lHo-zu-c5R"/>
-                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="ygX-Wf-OQd"/>
-                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="8" id="zuF-vR-qhx"/>
+                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="1D9-iN-S8a"/>
+                                    <constraint firstItem="prj-Qh-iuy" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="1Jx-8H-Icd"/>
+                                    <constraint firstItem="Pzu-wN-tXz" firstAttribute="top" secondItem="Z5m-nT-Y3m" secondAttribute="bottom" constant="1" id="2Fu-ia-syA"/>
+                                    <constraint firstItem="aT8-f3-Bhj" firstAttribute="top" secondItem="XZM-g0-MtK" secondAttribute="bottom" constant="1" id="2xf-Ch-0uT"/>
+                                    <constraint firstItem="SDb-3Y-NUd" firstAttribute="leading" secondItem="Z5m-nT-Y3m" secondAttribute="trailing" constant="1" id="5hY-WT-bZt"/>
+                                    <constraint firstItem="jX0-rw-TKS" firstAttribute="leading" secondItem="VkH-Sd-U8s" secondAttribute="trailing" constant="1" id="78v-T6-Bbz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jq0-Wi-gtE" secondAttribute="trailing" id="7T1-7X-hJI"/>
+                                    <constraint firstItem="9TL-oa-pHx" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="8Oo-OY-52C"/>
+                                    <constraint firstItem="iWg-Wu-960" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="9bT-64-upW"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="AX7-iq-7ud"/>
+                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="bottom" secondItem="prj-Qh-iuy" secondAttribute="top" id="AXX-ot-etx"/>
+                                    <constraint firstItem="jX0-rw-TKS" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="AZ1-aT-EIw"/>
+                                    <constraint firstAttribute="bottom" secondItem="9TL-oa-pHx" secondAttribute="bottom" constant="1" id="BBx-FU-1LO"/>
+                                    <constraint firstItem="GvF-dv-iUf" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="C9F-zj-7hw"/>
+                                    <constraint firstItem="Pv3-Nr-biY" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="D6i-Rh-sUd"/>
+                                    <constraint firstItem="Q9r-9b-42k" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="E2W-5O-7wy"/>
+                                    <constraint firstItem="Pv3-Nr-biY" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="EUx-au-mU9"/>
+                                    <constraint firstItem="GFs-Wn-b2u" firstAttribute="leading" secondItem="Pzu-wN-tXz" secondAttribute="trailing" constant="1" id="EYm-mR-LS8"/>
+                                    <constraint firstItem="VkH-Sd-U8s" firstAttribute="top" secondItem="Pzu-wN-tXz" secondAttribute="bottom" constant="1" id="Eqv-jT-JM0"/>
+                                    <constraint firstItem="9TL-oa-pHx" firstAttribute="top" secondItem="M2X-jn-wSa" secondAttribute="bottom" constant="1" id="F50-Pn-39P"/>
+                                    <constraint firstAttribute="trailing" secondItem="vOY-a5-bwB" secondAttribute="trailing" id="HFp-oy-mv9"/>
+                                    <constraint firstItem="Z5m-nT-Y3m" firstAttribute="leading" secondItem="prj-Qh-iuy" secondAttribute="trailing" constant="1" id="KOL-9h-lFV"/>
+                                    <constraint firstItem="Pzu-wN-tXz" firstAttribute="leading" secondItem="XZM-g0-MtK" secondAttribute="trailing" constant="1" id="L8v-hu-tiq"/>
+                                    <constraint firstItem="3dI-79-Kt4" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.5" constant="-1" id="LDI-FA-w9G"/>
+                                    <constraint firstItem="GFs-Wn-b2u" firstAttribute="top" secondItem="SDb-3Y-NUd" secondAttribute="bottom" constant="1" id="NBb-Vl-3Hf"/>
+                                    <constraint firstItem="Q9r-9b-42k" firstAttribute="top" secondItem="iWg-Wu-960" secondAttribute="bottom" constant="1" id="NZ4-22-5Ln"/>
+                                    <constraint firstItem="Pv3-Nr-biY" firstAttribute="top" secondItem="aT8-f3-Bhj" secondAttribute="bottom" constant="1" id="Qeg-dA-d2M"/>
+                                    <constraint firstAttribute="trailing" secondItem="GvF-dv-iUf" secondAttribute="trailing" id="Sn8-vU-b3w"/>
+                                    <constraint firstItem="M2X-jn-wSa" firstAttribute="top" secondItem="jX0-rw-TKS" secondAttribute="bottom" constant="1" id="SyI-j6-aJq"/>
+                                    <constraint firstItem="M2X-jn-wSa" firstAttribute="leading" secondItem="QL6-me-5da" secondAttribute="trailing" constant="1" id="Wbk-Av-pYQ"/>
+                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" id="aCb-YD-zDX"/>
+                                    <constraint firstAttribute="trailing" secondItem="7YQ-uj-G1Y" secondAttribute="trailing" constant="8" id="aMs-eV-4Pe"/>
+                                    <constraint firstItem="iWg-Wu-960" firstAttribute="top" secondItem="vOY-a5-bwB" secondAttribute="bottom" constant="1" id="b49-eX-64Z"/>
+                                    <constraint firstItem="Jq0-Wi-gtE" firstAttribute="top" secondItem="nJ9-Pe-kCj" secondAttribute="top" constant="8" id="b8x-GV-bZv"/>
+                                    <constraint firstItem="4FY-e5-GNv" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="e4O-pl-a4k"/>
+                                    <constraint firstItem="vOY-a5-bwB" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="eia-wV-yWF"/>
+                                    <constraint firstItem="4FY-e5-GNv" firstAttribute="top" secondItem="Q9r-9b-42k" secondAttribute="bottom" constant="1" id="fC9-dP-Wtd"/>
+                                    <constraint firstItem="Pv3-Nr-biY" firstAttribute="bottom" secondItem="3dI-79-Kt4" secondAttribute="top" constant="-1" id="fqD-rt-ecH"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="top" secondItem="prj-Qh-iuy" secondAttribute="bottom" constant="1" id="fr9-qF-4pq"/>
+                                    <constraint firstItem="GFs-Wn-b2u" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="g2f-AP-kZ7"/>
+                                    <constraint firstItem="QL6-me-5da" firstAttribute="top" secondItem="VkH-Sd-U8s" secondAttribute="bottom" constant="1" id="hJe-6B-xBH"/>
+                                    <constraint firstItem="QL6-me-5da" firstAttribute="leading" secondItem="Pv3-Nr-biY" secondAttribute="trailing" constant="1" id="i6T-Az-hsU"/>
+                                    <constraint firstItem="7YQ-uj-G1Y" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="8" id="iO1-Zu-Zlp"/>
+                                    <constraint firstItem="aT8-f3-Bhj" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="iUj-Qv-gsP"/>
+                                    <constraint firstItem="aT8-f3-Bhj" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="ilL-R4-8QQ"/>
+                                    <constraint firstItem="Pzu-wN-tXz" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="jbl-WG-fPX"/>
+                                    <constraint firstItem="3dI-79-Kt4" firstAttribute="leading" secondItem="nJ9-Pe-kCj" secondAttribute="leading" constant="1" id="ksr-QL-VIM"/>
+                                    <constraint firstAttribute="trailing" secondItem="iWg-Wu-960" secondAttribute="trailing" id="l3T-q2-FMg"/>
+                                    <constraint firstItem="Z5m-nT-Y3m" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="mLU-be-vPj"/>
+                                    <constraint firstItem="vOY-a5-bwB" firstAttribute="top" secondItem="GvF-dv-iUf" secondAttribute="bottom" constant="1" id="mWT-xl-7hE"/>
+                                    <constraint firstAttribute="bottom" secondItem="4FY-e5-GNv" secondAttribute="bottom" constant="1" id="ogw-xD-JeO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q9r-9b-42k" secondAttribute="trailing" id="qrf-v3-Sgy"/>
+                                    <constraint firstItem="SDb-3Y-NUd" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="r0Z-uj-NAE"/>
+                                    <constraint firstItem="XZM-g0-MtK" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="r4m-1U-97N"/>
+                                    <constraint firstItem="VkH-Sd-U8s" firstAttribute="leading" secondItem="aT8-f3-Bhj" secondAttribute="trailing" constant="1" id="rFi-UN-XlC"/>
+                                    <constraint firstItem="VkH-Sd-U8s" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="sGY-gS-VcG"/>
+                                    <constraint firstItem="3dI-79-Kt4" firstAttribute="bottom" secondItem="nJ9-Pe-kCj" secondAttribute="bottom" constant="-1" id="saF-b4-G01"/>
+                                    <constraint firstItem="9TL-oa-pHx" firstAttribute="leading" secondItem="3dI-79-Kt4" secondAttribute="trailing" constant="1" id="vWb-4E-KPf"/>
+                                    <constraint firstItem="QL6-me-5da" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="vlc-xc-tuv"/>
+                                    <constraint firstAttribute="trailing" secondItem="4FY-e5-GNv" secondAttribute="trailing" id="vnb-mQ-pv0"/>
+                                    <constraint firstItem="M2X-jn-wSa" firstAttribute="width" secondItem="nJ9-Pe-kCj" secondAttribute="width" multiplier="0.25" constant="-1" id="wgc-2S-L3a"/>
+                                    <constraint firstItem="3dI-79-Kt4" firstAttribute="top" secondItem="QL6-me-5da" secondAttribute="bottom" constant="1" id="ycx-HK-4iO"/>
+                                    <constraint firstItem="jX0-rw-TKS" firstAttribute="top" secondItem="GFs-Wn-b2u" secondAttribute="bottom" constant="1" id="zCg-SA-3Kt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -349,8 +399,21 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="7YQ-uj-G1Y" id="va9-p6-NLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="w1w-VP-xdM">
+                    <connections>
+                        <action selector="clear:" destination="BYZ-38-t0r" id="rl1-VW-vN7"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="vv1-zs-YLc">
+                    <connections>
+                        <action selector="clear:" destination="BYZ-38-t0r" id="Ydt-gf-C4Y"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="439" y="309"/>
         </scene>
