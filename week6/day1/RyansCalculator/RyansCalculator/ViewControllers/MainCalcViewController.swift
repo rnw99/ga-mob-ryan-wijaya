@@ -12,9 +12,9 @@ class MainCalcViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
     
-    // var newValue: Double = 0
     var operation: String?
     var previousValue: Double = 0
+    var operandBool: Bool = false
     
     
     @IBAction func clear(sender: AnyObject) {
@@ -31,7 +31,10 @@ class MainCalcViewController: UIViewController {
             display.text = String(format: "%g", newValue)
         } */
         
-        if (numberText == ".") {
+        if (operandBool == true) {
+            screen = numberText
+            self.operandBool = false
+        } else if (numberText == ".") {
             if (screen?.rangeOfString(".") == nil) {
                 screen = screen! + numberText
             }
@@ -49,7 +52,7 @@ class MainCalcViewController: UIViewController {
         
         self.operation = operationText
         self.previousValue = numberText.doubleValue
-        self.displayLabel.text = "0"
+        self.operandBool = true
     }
     
     @IBAction func directOperation(sender: UIButton) {
@@ -61,7 +64,11 @@ class MainCalcViewController: UIViewController {
         self.previousValue = numberText.doubleValue
         
         if (operation == "⁺/-") {
-            result = self.previousValue * -1
+            if (numberText == "0") {
+                result = self.previousValue
+            } else {
+                result = self.previousValue * -1
+            }
         } else {
             result = self.previousValue / 100
         }
