@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0BF6E8AC-C728-4928-B28E-78B1E9B8F30D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NotesThree</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D376A8DA9B6730A1DF07366D493AE99BFC03662</key>
+		<string>https://github.com/rnw99/ga-mob-ryan-wijaya.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>week7/day2/NotesThree/NotesThree.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D376A8DA9B6730A1DF07366D493AE99BFC03662</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rnw99/ga-mob-ryan-wijaya.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D376A8DA9B6730A1DF07366D493AE99BFC03662</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D376A8DA9B6730A1DF07366D493AE99BFC03662</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ga-mob-ryan-wijaya</string>
+		</dict>
+	</array>
+</dict>
+</plist>
