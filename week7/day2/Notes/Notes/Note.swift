@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc (Note)    // must be added in manually
+// @objc (Note)    // must be added in manually
 
 class Note: NSManagedObject {
 

@@ -419,6 +419,7 @@
 				BF1D22B31AD66A5D00734B7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF1D22B41AD66A5D00734B7A /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +428,7 @@
 				BF1D22B61AD66A5D00734B7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
