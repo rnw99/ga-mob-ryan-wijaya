@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFC9FBEE1ADFBF6400A6DC94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9FBED1ADFBF6400A6DC94 /* AppDelegate.swift */; };
+		BFC9FBF11ADFBF6400A6DC94 /* URL_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFC9FBEF1ADFBF6400A6DC94 /* URL_Viewer.xcdatamodeld */; };
+		BFC9FBF31ADFBF6400A6DC94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9FBF21ADFBF6400A6DC94 /* ViewController.swift */; };
+		BFC9FBF61ADFBF6400A6DC94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC9FBF41ADFBF6400A6DC94 /* Main.storyboard */; };
+		BFC9FBF81ADFBF6400A6DC94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC9FBF71ADFBF6400A6DC94 /* Images.xcassets */; };
+		BFC9FBFB1ADFBF6400A6DC94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC9FBF91ADFBF6400A6DC94 /* LaunchScreen.xib */; };
+		BFC9FC071ADFBF6400A6DC94 /* URL_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9FC061ADFBF6400A6DC94 /* URL_ViewerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFC9FC011ADFBF6400A6DC94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC9FBE01ADFBF6400A6DC94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFC9FBE71ADFBF6400A6DC94;
+			remoteInfo = "URL Viewer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFC9FBE81ADFBF6400A6DC94 /* URL Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URL Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC9FBEC1ADFBF6400A6DC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC9FBED1ADFBF6400A6DC94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFC9FBF01ADFBF6400A6DC94 /* URL_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = URL_Viewer.xcdatamodel; sourceTree = "<group>"; };
+		BFC9FBF21ADFBF6400A6DC94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFC9FBF51ADFBF6400A6DC94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFC9FBF71ADFBF6400A6DC94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFC9FBFA1ADFBF6400A6DC94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BFC9FC001ADFBF6400A6DC94 /* URL ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "URL ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC9FC051ADFBF6400A6DC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC9FC061ADFBF6400A6DC94 /* URL_ViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_ViewerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFC9FBE51ADFBF6400A6DC94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC9FBFD1ADFBF6400A6DC94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFC9FBDF1ADFBF6400A6DC94 = {
+			isa = PBXGroup;
+			children = (
+				BFC9FBEA1ADFBF6400A6DC94 /* URL Viewer */,
+				BFC9FC031ADFBF6400A6DC94 /* URL ViewerTests */,
+				BFC9FBE91ADFBF6400A6DC94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFC9FBE91ADFBF6400A6DC94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFC9FBE81ADFBF6400A6DC94 /* URL Viewer.app */,
+				BFC9FC001ADFBF6400A6DC94 /* URL ViewerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFC9FBEA1ADFBF6400A6DC94 /* URL Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				BFC9FBED1ADFBF6400A6DC94 /* AppDelegate.swift */,
+				BFC9FBF21ADFBF6400A6DC94 /* ViewController.swift */,
+				BFC9FBF41ADFBF6400A6DC94 /* Main.storyboard */,
+				BFC9FBF71ADFBF6400A6DC94 /* Images.xcassets */,
+				BFC9FBF91ADFBF6400A6DC94 /* LaunchScreen.xib */,
+				BFC9FBEF1ADFBF6400A6DC94 /* URL_Viewer.xcdatamodeld */,
+				BFC9FBEB1ADFBF6400A6DC94 /* Supporting Files */,
+			);
+			path = "URL Viewer";
+			sourceTree = "<group>";
+		};
+		BFC9FBEB1ADFBF6400A6DC94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFC9FBEC1ADFBF6400A6DC94 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFC9FC031ADFBF6400A6DC94 /* URL ViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFC9FC061ADFBF6400A6DC94 /* URL_ViewerTests.swift */,
+				BFC9FC041ADFBF6400A6DC94 /* Supporting Files */,
+			);
+			path = "URL ViewerTests";
+			sourceTree = "<group>";
+		};
+		BFC9FC041ADFBF6400A6DC94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFC9FC051ADFBF6400A6DC94 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFC9FBE71ADFBF6400A6DC94 /* URL Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC9FC0A1ADFBF6400A6DC94 /* Build configuration list for PBXNativeTarget "URL Viewer" */;
+			buildPhases = (
+				BFC9FBE41ADFBF6400A6DC94 /* Sources */,
+				BFC9FBE51ADFBF6400A6DC94 /* Frameworks */,
+				BFC9FBE61ADFBF6400A6DC94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "URL Viewer";
+			productName = "URL Viewer";
+			productReference = BFC9FBE81ADFBF6400A6DC94 /* URL Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFC9FBFF1ADFBF6400A6DC94 /* URL ViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC9FC0D1ADFBF6400A6DC94 /* Build configuration list for PBXNativeTarget "URL ViewerTests" */;
+			buildPhases = (
+				BFC9FBFC1ADFBF6400A6DC94 /* Sources */,
+				BFC9FBFD1ADFBF6400A6DC94 /* Frameworks */,
+				BFC9FBFE1ADFBF6400A6DC94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFC9FC021ADFBF6400A6DC94 /* PBXTargetDependency */,
+			);
+			name = "URL ViewerTests";
+			productName = "URL ViewerTests";
+			productReference = BFC9FC001ADFBF6400A6DC94 /* URL ViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFC9FBE01ADFBF6400A6DC94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = rnwcorp;
+				TargetAttributes = {
+					BFC9FBE71ADFBF6400A6DC94 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BFC9FBFF1ADFBF6400A6DC94 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BFC9FBE71ADFBF6400A6DC94;
+					};
+				};
+			};
+			buildConfigurationList = BFC9FBE31ADFBF6400A6DC94 /* Build configuration list for PBXProject "URL Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFC9FBDF1ADFBF6400A6DC94;
+			productRefGroup = BFC9FBE91ADFBF6400A6DC94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFC9FBE71ADFBF6400A6DC94 /* URL Viewer */,
+				BFC9FBFF1ADFBF6400A6DC94 /* URL ViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFC9FBE61ADFBF6400A6DC94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC9FBF61ADFBF6400A6DC94 /* Main.storyboard in Resources */,
+				BFC9FBFB1ADFBF6400A6DC94 /* LaunchScreen.xib in Resources */,
+				BFC9FBF81ADFBF6400A6DC94 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC9FBFE1ADFBF6400A6DC94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFC9FBE41ADFBF6400A6DC94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC9FBF31ADFBF6400A6DC94 /* ViewController.swift in Sources */,
+				BFC9FBEE1ADFBF6400A6DC94 /* AppDelegate.swift in Sources */,
+				BFC9FBF11ADFBF6400A6DC94 /* URL_Viewer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC9FBFC1ADFBF6400A6DC94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC9FC071ADFBF6400A6DC94 /* URL_ViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFC9FC021ADFBF6400A6DC94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFC9FBE71ADFBF6400A6DC94 /* URL Viewer */;
+			targetProxy = BFC9FC011ADFBF6400A6DC94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFC9FBF41ADFBF6400A6DC94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC9FBF51ADFBF6400A6DC94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFC9FBF91ADFBF6400A6DC94 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC9FBFA1ADFBF6400A6DC94 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFC9FC081ADFBF6400A6DC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFC9FC091ADFBF6400A6DC94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFC9FC0B1ADFBF6400A6DC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "URL Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BFC9FC0C1ADFBF6400A6DC94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "URL Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BFC9FC0E1ADFBF6400A6DC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "URL ViewerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URL Viewer.app/URL Viewer";
+			};
+			name = Debug;
+		};
+		BFC9FC0F1ADFBF6400A6DC94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "URL ViewerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URL Viewer.app/URL Viewer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFC9FBE31ADFBF6400A6DC94 /* Build configuration list for PBXProject "URL Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC9FC081ADFBF6400A6DC94 /* Debug */,
+				BFC9FC091ADFBF6400A6DC94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC9FC0A1ADFBF6400A6DC94 /* Build configuration list for PBXNativeTarget "URL Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC9FC0B1ADFBF6400A6DC94 /* Debug */,
+				BFC9FC0C1ADFBF6400A6DC94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFC9FC0D1ADFBF6400A6DC94 /* Build configuration list for PBXNativeTarget "URL ViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC9FC0E1ADFBF6400A6DC94 /* Debug */,
+				BFC9FC0F1ADFBF6400A6DC94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFC9FBEF1ADFBF6400A6DC94 /* URL_Viewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFC9FBF01ADFBF6400A6DC94 /* URL_Viewer.xcdatamodel */,
+			);
+			currentVersion = BFC9FBF01ADFBF6400A6DC94 /* URL_Viewer.xcdatamodel */;
+			path = URL_Viewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BFC9FBE01ADFBF6400A6DC94 /* Project object */;
+}

@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ic-sJ-Sb4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HDo-Sv-nuO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Task List View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="F1P-8K-BgK">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TaskListViewController" customModule="NotesThree" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="CZc-a4-qEK" customClass="TaskListViewController" customModule="NotesThree" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wFU-d1-sdP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="JCd-fu-29l">
-                        <barButtonItem key="rightBarButtonItem" title="New" id="xWU-Sg-456">
-                            <color key="tintColor" red="1" green="0.8514547563" blue="0.17093009049999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="KsV-FW-YEm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KsV-FW-YEm" id="8Vn-et-OoJ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CZc-a4-qEK" id="cVB-D2-nDe"/>
+                            <outlet property="delegate" destination="CZc-a4-qEK" id="dfT-aE-1DV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Zso-aI-tXb">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="hvl-k0-Lm2">
                             <connections>
-                                <action selector="addNote:" destination="BYZ-38-t0r" id="P4h-yo-PWg"/>
-                                <segue destination="0Ai-it-mix" kind="show" id="Ww3-zQ-16R"/>
+                                <action selector="addNote:" destination="CZc-a4-qEK" id="Q2H-45-gs9"/>
+                                <segue destination="0Ai-it-mix" kind="show" id="Ura-Fo-62m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0HA-QC-gAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="299"/>
+            <point key="canvasLocation" x="1762" y="273"/>
         </scene>
-        <!--Add Note View Controller-->
+        <!--Add Task-->
         <scene sceneID="aVO-V1-BZB">
             <objects>
                 <viewController id="0Ai-it-mix" customClass="AddNoteViewController" customModule="NotesThree" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUE-qb-BV0">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUE-qb-BV0">
                                 <rect key="frame" x="16" y="78" width="568" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -52,9 +60,15 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uUE-qb-BV0" firstAttribute="top" secondItem="Hqv-ih-z8C" secondAttribute="bottom" constant="14" id="574-aZ-lLf"/>
+                            <constraint firstItem="uUE-qb-BV0" firstAttribute="leading" secondItem="3bJ-Lr-ZhZ" secondAttribute="leadingMargin" id="BpL-nE-JF2"/>
+                            <constraint firstItem="uUE-qb-BV0" firstAttribute="trailing" secondItem="3bJ-Lr-ZhZ" secondAttribute="trailingMargin" id="Ny0-Wt-Liz"/>
+                            <constraint firstItem="fwy-14-jxa" firstAttribute="top" secondItem="uUE-qb-BV0" secondAttribute="bottom" constant="20" id="csA-is-tEN"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="us2-Wd-hf5">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="bia-nJ-viT"/>
+                    <navigationItem key="navigationItem" title="Add Task" id="hLi-TB-VwG">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="nmO-Wb-Fke"/>
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="uUE-qb-BV0" id="U1v-My-zXk"/>
@@ -62,26 +76,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVY-cX-Iwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="299"/>
+            <point key="canvasLocation" x="2456" y="273"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Bhr-Wj-izU">
+        <scene sceneID="czW-8Z-HLt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ic-sJ-Sb4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HDo-Sv-nuO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="32L-bW-L9I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ma1-Qg-14c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="v0r-wz-sTS"/>
+                        <segue destination="CZc-a4-qEK" kind="relationship" relationship="rootViewController" id="e1c-gc-yRJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fre-Tz-c4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZI-UQ-8KQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="299"/>
+            <point key="canvasLocation" x="876" y="227"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="0.8514547563" blue="0.17093009049999999" alpha="1" colorSpace="calibratedRGB"/>

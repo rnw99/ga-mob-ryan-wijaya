@@ -16,7 +16,7 @@
 		BF4E1D451ADE707D00260AF2 /* NotesThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E1D441ADE707D00260AF2 /* NotesThreeTests.swift */; };
 		BF4E1D531ADE731C00260AF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E1D521ADE731C00260AF2 /* ViewController.swift */; };
 		BF4E1D551ADE733600260AF2 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E1D541ADE733600260AF2 /* CoreDataHelper.swift */; };
-		BF4E1D571ADE744300260AF2 /* NotesThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E1D561ADE744300260AF2 /* NotesThree.swift */; };
+		BF4E1D571ADE744300260AF2 /* NotesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E1D561ADE744300260AF2 /* NotesEntity.swift */; };
 		BF4E1D591ADE783600260AF2 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E1D581ADE783600260AF2 /* AddNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		BF4E1D441ADE707D00260AF2 /* NotesThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesThreeTests.swift; sourceTree = "<group>"; };
 		BF4E1D521ADE731C00260AF2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF4E1D541ADE733600260AF2 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		BF4E1D561ADE744300260AF2 /* NotesThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesThree.swift; sourceTree = "<group>"; };
+		BF4E1D561ADE744300260AF2 /* NotesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEntity.swift; sourceTree = "<group>"; };
 		BF4E1D581ADE783600260AF2 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,7 @@
 				BF4E1D351ADE707C00260AF2 /* Images.xcassets */,
 				BF4E1D371ADE707C00260AF2 /* LaunchScreen.xib */,
 				BF4E1D2D1ADE707C00260AF2 /* NotesThree.xcdatamodeld */,
-				BF4E1D561ADE744300260AF2 /* NotesThree.swift */,
+				BF4E1D561ADE744300260AF2 /* NotesEntity.swift */,
 				BF4E1D291ADE707C00260AF2 /* Supporting Files */,
 			);
 			path = NotesThree;
@@ -228,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4E1D591ADE783600260AF2 /* AddNoteViewController.swift in Sources */,
-				BF4E1D571ADE744300260AF2 /* NotesThree.swift in Sources */,
+				BF4E1D571ADE744300260AF2 /* NotesEntity.swift in Sources */,
 				BF4E1D531ADE731C00260AF2 /* ViewController.swift in Sources */,
 				BF4E1D311ADE707C00260AF2 /* TaskListViewController.swift in Sources */,
 				BF4E1D2F1ADE707C00260AF2 /* NotesThree.xcdatamodeld in Sources */,
@@ -429,6 +429,7 @@
 				BF4E1D4A1ADE707D00260AF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF4E1D4B1ADE707D00260AF2 /* Build configuration list for PBXNativeTarget "NotesThreeTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +438,7 @@
 				BF4E1D4D1ADE707D00260AF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

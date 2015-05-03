@@ -42,11 +42,12 @@ class TaskListViewController: UITableViewController, NSFetchedResultsControllerD
         // Dispose of any resources that can be recreated.
     }
 
+    
     @IBAction func addNote(sender: UIBarButtonItem) {
         // opens AddNote View Controller
         // adds a new note attribute in CoreData
         
-        let note = NSEntityDescription.insertNewObjectForEntityForName("NotesEntity", inManagedObjectContext: self.coreDataHelper.managedObjectContext) as NotesThree
+        let note = NSEntityDescription.insertNewObjectForEntityForName("NotesEntity", inManagedObjectContext: self.coreDataHelper.managedObjectContext) as NotesEntity
         note.note = "Hello World"
         note.createdAt = NSDate()
         
@@ -76,13 +77,13 @@ class TaskListViewController: UITableViewController, NSFetchedResultsControllerD
     
     func configureCell(cell: UITableViewCell, indexPath: NSIndexPath) {
         // Step 2: Retrieve the data
-        let note = self.fetchedResultsController.objectAtIndexPath(indexPath) as NotesThree
+        let note = self.fetchedResultsController.objectAtIndexPath(indexPath) as NotesEntity
         
         // Step 3: Configure the cell
         cell.textLabel!.text = note.note
     }
     
-    
+
     
     /* called first
     begins update to `UITableView`

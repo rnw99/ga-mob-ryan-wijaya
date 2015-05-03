@@ -23,3 +23,14 @@ class CoreDataHelper {
     
 }
 
+// TERMS IN NETWORKING:
+// create
+// read
+// update
+// delete
+
+// TERMS IN NETWORKING:
+// post
+// get
+// put (update)
+// delete
