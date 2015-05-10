@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E4D61FC130E0DF8877CFFBC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80923B6CD8005F459806474 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BF678C381AF8BBCE009B68C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678C371AF8BBCE009B68C4 /* AppDelegate.swift */; };
+		BF678C3A1AF8BBCE009B68C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678C391AF8BBCE009B68C4 /* ViewController.swift */; };
+		BF678C3D1AF8BBCE009B68C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF678C3B1AF8BBCE009B68C4 /* Main.storyboard */; };
+		BF678C3F1AF8BBCE009B68C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF678C3E1AF8BBCE009B68C4 /* Images.xcassets */; };
+		BF678C421AF8BBCE009B68C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF678C401AF8BBCE009B68C4 /* LaunchScreen.xib */; };
+		BF678C4E1AF8BBCF009B68C4 /* TripodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678C4D1AF8BBCF009B68C4 /* TripodTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF678C481AF8BBCF009B68C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF678C2A1AF8BBCE009B68C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF678C311AF8BBCE009B68C4;
+			remoteInfo = Tripod;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BD0CEFB47E0B245018AF38A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BF678C321AF8BBCE009B68C4 /* Tripod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF678C361AF8BBCE009B68C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF678C371AF8BBCE009B68C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF678C391AF8BBCE009B68C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF678C3C1AF8BBCE009B68C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF678C3E1AF8BBCE009B68C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF678C411AF8BBCE009B68C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BF678C471AF8BBCF009B68C4 /* TripodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF678C4C1AF8BBCF009B68C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF678C4D1AF8BBCF009B68C4 /* TripodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripodTests.swift; sourceTree = "<group>"; };
+		C80923B6CD8005F459806474 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE8126E40107EE105669A424 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF678C2F1AF8BBCE009B68C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4D61FC130E0DF8877CFFBC /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF678C441AF8BBCF009B68C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6ABD5227A824D5C03ABD8486 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE8126E40107EE105669A424 /* Pods.debug.xcconfig */,
+				3BD0CEFB47E0B245018AF38A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E3BA5FE7B6BB006A8BE1579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C80923B6CD8005F459806474 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF678C291AF8BBCE009B68C4 = {
+			isa = PBXGroup;
+			children = (
+				BF678C341AF8BBCE009B68C4 /* Tripod */,
+				BF678C4A1AF8BBCF009B68C4 /* TripodTests */,
+				BF678C331AF8BBCE009B68C4 /* Products */,
+				6ABD5227A824D5C03ABD8486 /* Pods */,
+				9E3BA5FE7B6BB006A8BE1579 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF678C331AF8BBCE009B68C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF678C321AF8BBCE009B68C4 /* Tripod.app */,
+				BF678C471AF8BBCF009B68C4 /* TripodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF678C341AF8BBCE009B68C4 /* Tripod */ = {
+			isa = PBXGroup;
+			children = (
+				BF678C371AF8BBCE009B68C4 /* AppDelegate.swift */,
+				BF678C391AF8BBCE009B68C4 /* ViewController.swift */,
+				BF678C3B1AF8BBCE009B68C4 /* Main.storyboard */,
+				BF678C3E1AF8BBCE009B68C4 /* Images.xcassets */,
+				BF678C401AF8BBCE009B68C4 /* LaunchScreen.xib */,
+				BF678C351AF8BBCE009B68C4 /* Supporting Files */,
+			);
+			path = Tripod;
+			sourceTree = "<group>";
+		};
+		BF678C351AF8BBCE009B68C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF678C361AF8BBCE009B68C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF678C4A1AF8BBCF009B68C4 /* TripodTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF678C4D1AF8BBCF009B68C4 /* TripodTests.swift */,
+				BF678C4B1AF8BBCF009B68C4 /* Supporting Files */,
+			);
+			path = TripodTests;
+			sourceTree = "<group>";
+		};
+		BF678C4B1AF8BBCF009B68C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF678C4C1AF8BBCF009B68C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF678C311AF8BBCE009B68C4 /* Tripod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF678C511AF8BBCF009B68C4 /* Build configuration list for PBXNativeTarget "Tripod" */;
+			buildPhases = (
+				F4C7CE95489284A62BB53CC4 /* Check Pods Manifest.lock */,
+				BF678C2E1AF8BBCE009B68C4 /* Sources */,
+				BF678C2F1AF8BBCE009B68C4 /* Frameworks */,
+				BF678C301AF8BBCE009B68C4 /* Resources */,
+				49B2550972EBC0540F732E9E /* Embed Pods Frameworks */,
+				A296D1E0D48444C564E1B0EB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tripod;
+			productName = Tripod;
+			productReference = BF678C321AF8BBCE009B68C4 /* Tripod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF678C461AF8BBCF009B68C4 /* TripodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF678C541AF8BBCF009B68C4 /* Build configuration list for PBXNativeTarget "TripodTests" */;
+			buildPhases = (
+				BF678C431AF8BBCF009B68C4 /* Sources */,
+				BF678C441AF8BBCF009B68C4 /* Frameworks */,
+				BF678C451AF8BBCF009B68C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF678C491AF8BBCF009B68C4 /* PBXTargetDependency */,
+			);
+			name = TripodTests;
+			productName = TripodTests;
+			productReference = BF678C471AF8BBCF009B68C4 /* TripodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF678C2A1AF8BBCE009B68C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = rnwcorp;
+				TargetAttributes = {
+					BF678C311AF8BBCE009B68C4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					BF678C461AF8BBCF009B68C4 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = BF678C311AF8BBCE009B68C4;
+					};
+				};
+			};
+			buildConfigurationList = BF678C2D1AF8BBCE009B68C4 /* Build configuration list for PBXProject "Tripod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF678C291AF8BBCE009B68C4;
+			productRefGroup = BF678C331AF8BBCE009B68C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF678C311AF8BBCE009B68C4 /* Tripod */,
+				BF678C461AF8BBCF009B68C4 /* TripodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF678C301AF8BBCE009B68C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF678C3D1AF8BBCE009B68C4 /* Main.storyboard in Resources */,
+				BF678C421AF8BBCE009B68C4 /* LaunchScreen.xib in Resources */,
+				BF678C3F1AF8BBCE009B68C4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF678C451AF8BBCF009B68C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49B2550972EBC0540F732E9E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A296D1E0D48444C564E1B0EB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C7CE95489284A62BB53CC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF678C2E1AF8BBCE009B68C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF678C3A1AF8BBCE009B68C4 /* ViewController.swift in Sources */,
+				BF678C381AF8BBCE009B68C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF678C431AF8BBCF009B68C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF678C4E1AF8BBCF009B68C4 /* TripodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF678C491AF8BBCF009B68C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF678C311AF8BBCE009B68C4 /* Tripod */;
+			targetProxy = BF678C481AF8BBCF009B68C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF678C3B1AF8BBCE009B68C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF678C3C1AF8BBCE009B68C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF678C401AF8BBCE009B68C4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF678C411AF8BBCE009B68C4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF678C4F1AF8BBCF009B68C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF678C501AF8BBCF009B68C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF678C521AF8BBCF009B68C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8126E40107EE105669A424 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tripod/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF678C531AF8BBCF009B68C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD0CEFB47E0B245018AF38A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tripod/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF678C551AF8BBCF009B68C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tripod.app/Tripod";
+			};
+			name = Debug;
+		};
+		BF678C561AF8BBCF009B68C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tripod.app/Tripod";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF678C2D1AF8BBCE009B68C4 /* Build configuration list for PBXProject "Tripod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF678C4F1AF8BBCF009B68C4 /* Debug */,
+				BF678C501AF8BBCF009B68C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF678C511AF8BBCF009B68C4 /* Build configuration list for PBXNativeTarget "Tripod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF678C521AF8BBCF009B68C4 /* Debug */,
+				BF678C531AF8BBCF009B68C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF678C541AF8BBCF009B68C4 /* Build configuration list for PBXNativeTarget "TripodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF678C551AF8BBCF009B68C4 /* Debug */,
+				BF678C561AF8BBCF009B68C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF678C2A1AF8BBCE009B68C4 /* Project object */;
+}
