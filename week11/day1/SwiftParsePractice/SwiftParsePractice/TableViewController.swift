@@ -84,6 +84,17 @@ class TableViewController: PFQueryTableViewController {
         
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            // then delete the record in Parse
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -97,7 +108,7 @@ class TableViewController: PFQueryTableViewController {
     
     override func viewDidAppear(animated: Bool) {
         // Refresh the table to ensure any data changes are displayed
-        tableView.reloadData()
+        loadObjects()
         
         // DID NOT CHANGE THE ORDER THOUGH BASED ON DESCENDING UPDATED AT ??????????
     }

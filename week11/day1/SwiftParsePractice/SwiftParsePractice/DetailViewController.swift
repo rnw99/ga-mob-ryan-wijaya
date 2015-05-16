@@ -48,7 +48,33 @@ class DetailViewController: UIViewController {
             updateObject["currencyCode"] = currencyCode.text
             
             // Save the data back to the server in a background task
-            updateObject.saveEventually()
+            updateObject.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+                
+                let alertController = UIAlertController(title: "Woohoo!", message: "Note updated successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                
+                // Display alert
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+                let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3.0 * Double(NSEC_PER_SEC)))
+                dispatch_after(delayTime, dispatch_get_main_queue()) {
+                    
+                    if alertController.isBeingDismissed() {
+                        
+                        // Return to table view
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }
+                    else {
+                        alertController.dismissViewControllerAnimated(true, completion: { () -> Void in
+                            
+                            // Return to table view
+                            self.navigationController?.popViewControllerAnimated(true)
+                        })
+                    }
+                }
+
+            })
             
         } else {
             
@@ -62,11 +88,34 @@ class DetailViewController: UIViewController {
             updateObject.ACL = PFACL(user: PFUser.currentUser()!)
             
             // Save the data back to the server in a background task
-            updateObject.saveEventually()
+            updateObject.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+                
+                let alertController = UIAlertController(title: "Woohoo!", message: "Note saved successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                
+                // Display alert
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+                let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3.0 * Double(NSEC_PER_SEC)))
+                dispatch_after(delayTime, dispatch_get_main_queue()) {
+                    
+                    if alertController.isBeingDismissed() {
+                        
+                        // Return to table view
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }
+                    else {
+                        alertController.dismissViewControllerAnimated(true, completion: { () -> Void in
+                            
+                            // Return to table view
+                            self.navigationController?.popViewControllerAnimated(true)
+                        })
+                    }
+                }
+            })
         }
         
-        // Return to table view
-        self.navigationController?.popViewControllerAnimated(true)
         
     }
     
