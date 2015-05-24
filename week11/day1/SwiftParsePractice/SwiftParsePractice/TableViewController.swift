@@ -59,7 +59,7 @@ class TableViewController: PFQueryTableViewController {
         return query
     }
     // You could further restrict the returned data set
-    // i.e. query.whereKey("currencyCode:, equalTo:"EUR")
+    // i.e. query.whereKey("currencyCode", equalTo: "EUR")
     // Maybe consider adding a search box to the table view and use the values entered within your query
     
 //    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -90,8 +90,23 @@ class TableViewController: PFQueryTableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+          //  tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             // then delete the record in Parse
+            
+            
+            // 1. Find the objects while they are still in the array
+            var object = objects.objectAtIndex(indexPath.row)
+            
+            // 2. Update the model by removing them from the array
+            self.object.removeObjectAtIndex(indexPath.row)
+            
+            // 3. Delete the rows from the table view
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            // 4. Delete the actual data in your discretion
+            object.deleteInBackgroundWithBlock(nil)
+            
+            
         }
     }
     
